@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QuanLySinhVien</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="common/css/main.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body onload="hienThi()" >
+<!-- Start of first page -->
+<div data-role="page" id="foo">
+
+	<div data-role="header" class="ui-btn ui-btn-b">
+		<h1>Management Students</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" style="margin-top:90px">
+	<h1 style="
+    text-align: center;
+    font-size: 1.5em;
+">Login</h1>
+	<form action="" method="get" name="myLogin">
+		  <div data-role="fieldcontain">
+		    <label for="textinput">UserName :</label>
+		    <input type="text" name="txtName" id="textinput" value=""  />
+	      </div>
+		  <div data-role="fieldcontain">
+		    <label for="passwordinput">Password :</label>
+		    <input type="password" name="txtPass" id="passwordinput" value=""  />
+	      </div>
+		  <div class="ui-grid-a">
+		    <div class="ui-block-a"><a href="#"  id="cmdBusyButtonIndicator" data-role="button"  onclick="checkLogin(document.myLogin.txtName.value,document.myLogin.txtPass.value)">Login</a></div>
+		    <div class="ui-block-b "><input type="reset" value="Reset"></div>
+	      </div>
+        	
+        </form>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" class="ui-btn ui-btn-b">
+		<h4>Ducpvpd01045</h4>
+	</div><!-- /footer -->
+</div>
+<!---------------------- /page1 ---------------------------------------------->
+
+
+
+
+
+<!-- Start of second page -->
+<div data-role="page" id="themsv">
+
+	<div data-role="header" class="ui-btn ui-btn-b">
+		<h1>Management Students</h1>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" style="margin-top:60px">
+	<h1 style="
+    text-align: center;
+    font-size: 1.5em;
+">Add Students</h1>
+        <form action="" method="get" name="addSinhVien">
+		  <div data-role="fieldcontain">
+		    <label for="textinput">Id :</label>
+		    <input type="text" name="txtId" id="userinput" value=""  />
+	      </div>
+		  <div data-role="fieldcontain">
+		    <label for="textinput">Name :</label>
+		    <input type="text" name="txtTensv" id="nameinput" value=""  />
+	      </div>
+	       <div data-role="fieldcontain">
+		    <label for="textinput">Email:</label>
+		    <input type="text" name="txtEmail" id="emailinput" value=""  />
+	      </div>
+	       <div data-role="fieldcontain">
+		    <label for="textinput">UserName:</label>
+		    <input type="text" name="txtUser" id="textinput" value=""  />
+	      </div>
+	       <div data-role="fieldcontain">
+		    <label for="passwordinput">Password:</label>
+		    <input type="password" name="txtPass" id="passwordinput" value=""  />
+	      </div>
+		  <div class="ui-grid-a">
+		    <div class="ui-block-a ui-btn-b" ><a href="#" id="them" data-role="button" onclick="addSinh(document.addSinhVien.txtId.value,document.addSinhVien.txtTensv.value,document.addSinhVien.txtEmail.value,document.addSinhVien.txtUser.value,document.addSinhVien.txtPass.value)">Save</a></div>
+		    <div class="ui-block-b ui-btn-b" ><a href="#bar" data-role="button" >Back</a></div>
+	      </div>
+        	
+        </form>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" class="ui-btn ui-btn-b">
+	
+		<h4>Ducpvpd01045</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!---------------------- /page2 ---------------------------------------------->
+
+
+
+
+
+
+<!-- Start of three page -->
+<div data-role="page" id="xoa">
+
+	<div data-role="header" class="ui-btn ui-btn-b">
+		<h1>Management Students</h1>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" style="margin-top:90px">
+	<h1 style="
+    text-align: center;
+    font-size: 1.5em;
+">Delete Students</h1>
+	<form action="" method="get" name="xoaSinhVien">
+		  <div data-role="fieldcontain">
+		    <label for="textinput">Id To Be Delete :</label>
+		    <input type="text" name="txtId" id="textinput" value=""  />
+	      </div>
+	       
+		  <div class="ui-grid-a">
+		    <div class="ui-block-a ui-btn-b"><a href="#" data-role="button" onclick="xoaSinh(document.xoaSinhVien.txtId.value)">Delete</a></div>
+		    <div class="ui-block-b ui-btn-b"><a href="#bar" data-role="button" >Back</a></div>
+	      </div>
+        	
+        </form>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" class="ui-btn ui-btn-b">
+	
+		<h4>Ducpvpd01045</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!---------------------- /page3 ---------------------------------------------->
+
+
+
+
+
+
+<!-- Start of 4 page -->
+<div data-role="page" id="bar">
+
+	<div data-role="header" class="ui-btn ui-btn-b">
+		<h1>Management Students</h1>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" style="margin-top:40px">
+	<div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+			<ul>
+				<li><a href="#one" class="ui-btn-active ui-state-persist">List Student</a></li>
+				<li><a href="#two">Manage</a></li>
+			</ul>
+		</div>
+  <div id="one" class="ui-body-d ui-content">
+   	<form>
+    <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
+</form>
+<ul data-role="listview" id="hienthi" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+   
+</ul>
+	
+  </div>
+  <div id="two">
+    <form>
+        
+    <a href="#themsv" data-icon="plus" data-role="button" class="ui-btn-b" >Add Students</a>
+<a href="#xoa" data-icon="delete" data-role="button" >Delete Students</a>
+<a href="#check" data-icon="edit" data-role="button" >Edit Students</a>
+</form>
+  </div>
+	</div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" class="ui-btn ui-btn-b">
+	
+		<h4>Ducpvpd01045</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!---------------------- /page4 ---------------------------------------------->
+
+
+<!-- Start of 5 page -->
+<div data-role="page" id="check">
+
+	<div data-role="header" class="ui-btn ui-btn-b">
+		<h1>Management Students</h1>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" style="margin-top:60px">
+	<h1 style="
+    text-align: center;
+    font-size: 1.5em;
+">Add Students</h1>
+        <form action="" method="get" name="update">
+		  <div data-role="fieldcontain">
+		    <label for="textinput"> Old Id  :</label>
+		    <input type="text" name="uơ" id="updateid" value=""  />
+	      </div>
+		  <div data-role="fieldcontain">
+		    <label for="textinput">New Name :</label>
+		    <input type="text" name="txtTensv" id="updateten" value=""  />
+	      </div>
+	       <div data-role="fieldcontain">
+		    <label for="textinput">New Email:</label>
+		    <input type="text" name="txtEmail" id="updateemail" value=""  />
+	      </div>
+	       <div data-role="fieldcontain">
+		    <label for="textinput">New UserName:</label>
+		    <input type="text" name="txtUser" id="updateuser" value=""  />
+	      </div>
+	       <div data-role="fieldcontain">
+		    <label for="passwordinput">New Password:</label>
+		    <input type="password" name="txtPass" id="updatepass" value=""  />
+	      </div>
+		  <div class="ui-grid-a">
+		    <div class="ui-block-a ui-btn-b" ><a href="#" data-role="button" onclick="updateSinhViens(document.update.updateten.value,document.update.updateemail.value,document.update.updateuser.value,document.update.updatepass.value,document.update.updateid.value)">Update</a></div>
+		    <div class="ui-block-b ui-btn-b" ><a href="#bar" data-role="button" >Back</a></div>
+	      </div>
+        	
+        </form>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" class="ui-btn ui-btn-b">
+		<h4>Ducpvpd01045</h4>
+	</div><!-- /footer -->
+</div>
+<!---------------------- /page5 ---------------------------------------------->
+
+
+
+
+<!-- Start of 6 page -->
+<div data-role="page" id="chitiet">
+
+	<div data-role="header" class="ui-btn ui-btn-b">
+		<h1>Management Students</h1>
+	</div><!-- /header -->
+	<div role="main" class="ui-content" style="margin-top:60px" onload="ht()" >
+	<div  id="view" class="ui-body ui-body-a ui-corner-all" style="margin-bottom:1em;">
+		
+		</div>
+		<a href="" data-role="button" onclick="load()" >Back</a></div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" class="ui-btn ui-btn-b">
+		<h4>Ducpvpd01045</h4>
+	</div><!-- /footer -->
+</div>
+<!---------------------- /page6 ---------------------------------------------->
+<script src="js/initOptions.js"></script>
+<script src="js/main.js"></script>
+<script src="js/messages.js"></script>
+<script src="js/sinhvien.js"></script>
+<script src="js/them.js"></script>
+<script src="js/xoa.js"></script>
+
+</body>
+</html>
